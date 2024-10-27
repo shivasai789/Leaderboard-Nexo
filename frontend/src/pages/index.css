@@ -1,0 +1,9 @@
+.popup-content{
+    width: 60%;
+}
+
+@media screen and (max-width: 400px) {
+    .popup-content{
+        width: 95%;
+    }
+}
