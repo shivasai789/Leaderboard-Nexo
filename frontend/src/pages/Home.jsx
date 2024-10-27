@@ -24,7 +24,7 @@ function Home() {
     const fetchUsers = async () => {
         try {
             setIsLoading(true)
-            const response = await axios.get("http://localhost:7000/api/user/v1/get-users");
+            const response = await axios.get("https://leaderboard-nexo.onrender.com/api/user/v1/get-users");
             const data = response.data.data
             setHomeUsers(data);
         } catch (error) {
@@ -71,7 +71,7 @@ function Home() {
     const onClickClaimPoints = async (username) => {
         try {
             setIsLoading(true)
-            const response = await axios.patch("http://localhost:7000/api/user/v1/claim-points",{username});
+            const response = await axios.patch("https://leaderboard-nexo.onrender.com/api/user/v1/claim-points",{username});
             fetchUsers();
             notifySuccess(`Points claimed successfully for ${response.data.data.username}`)
             console.log(response);

@@ -52,7 +52,7 @@ const notifySuccess = (message) => {
     e.preventDefault()
     try{
       setIsLoading(true)
-      const response = await axios.post("http://localhost:7000/api/auth/v1/register",registerDetails,config);
+      const response = await axios.post("https://leaderboard-nexo.onrender.com/api/auth/v1/register",registerDetails,config);
       console.log(response)
       notifySuccess(response.data.message)
     }

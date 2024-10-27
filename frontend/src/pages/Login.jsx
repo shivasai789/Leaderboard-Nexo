@@ -52,7 +52,7 @@ const notifyFailure = (message) => {
     e.preventDefault()
     try{
       setIsLoading(true)
-      const response = await axios.post("http://localhost:7000/api/auth/v1/login",loginDetails,config);
+      const response = await axios.post("https://leaderboard-nexo.onrender.com/api/auth/v1/login",loginDetails,config);
       const data = response.data
       localStorage.setItem('token',data.token)
       notifySuccess("Login Successfull !")

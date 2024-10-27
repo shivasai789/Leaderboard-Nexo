@@ -73,8 +73,8 @@ function Leaderboard() {
   const fetchData = async () => {
     try {
       setIsLoading(true);
-      const url1 = `http://localhost:7000/api/user/v1/get-users`;
-      const url2 = `http://localhost:7000/api/user/v1/${leaderboardSelectedTab}`;
+      const url1 = `https://leaderboard-nexo.onrender.com/api/user/v1/get-users`;
+      const url2 = `https://leaderboard-nexo.onrender.com/api/user/v1/${leaderboardSelectedTab}`;
 
       const response1 = await axios.get(url1);
       const response2 = await axios.get(url2);
@@ -109,7 +109,7 @@ function Leaderboard() {
     try {
       setIsLoading(true);
       const response = await axios.post(
-        "http://localhost:7000/api/user/v1/your-history",
+        "https://leaderboard-nexo.onrender.com/api/user/v1/your-history",
         { username }
       );
       console.log(response.data);
