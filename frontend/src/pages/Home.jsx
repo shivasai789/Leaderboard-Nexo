@@ -85,7 +85,7 @@ function Home() {
     }
 
     if(token === null){
-        return <Navigate to="/login"/>
+        return <Navigate to="/"/>
     }
 
 
